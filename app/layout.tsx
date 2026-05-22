@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { CursorBlob } from "@/components/CursorBlob";
+import { RevealObserver } from "@/components/RevealObserver";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "MatrixInn Solutions — Browser Extensions, Web Dev, Mobile Apps & SaaS",
+  title: "MatrixInn Solutions — Software, crafted.",
   description:
-    "MatrixInn Solutions builds custom browser extensions, web applications, mobile apps, and SaaS products. Trusted software partner for startups and businesses.",
-  keywords: [
-    "browser extensions",
-    "web development",
-    "mobile apps",
-    "SaaS",
-    "software development",
-    "MatrixInn Solutions",
-  ],
+    "MatrixInn Solutions builds browser extensions, web apps, mobile apps, and SaaS products for teams who refuse to settle for good enough.",
+  keywords: ["browser extensions", "web development", "mobile apps", "SaaS", "software development", "MatrixInn Solutions"],
   icons: {
     icon: "/Favicon.png",
     shortcut: "/Favicon.png",
@@ -29,17 +32,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${sora.variable} ${jetbrainsMono.variable}`}>
+        <CursorBlob />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <RevealObserver />
       </body>
     </html>
   );
