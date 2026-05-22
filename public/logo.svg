@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <!-- Icon: lightbulb + gear -->
+  <circle cx="28" cy="28" r="10" fill="#1d6bbf" opacity="0.15"/>
+  <!-- Lightbulb body -->
+  <path d="M28 12 C22 12 17 17 17 23 C17 27 19 30 22 32 L22 37 L34 37 L34 32 C37 30 39 27 39 23 C39 17 34 12 28 12Z" fill="#1d6bbf"/>
+  <!-- Lightbulb base -->
+  <rect x="22" y="37" width="12" height="3" rx="1.5" fill="#1558a0"/>
+  <rect x="23" y="41" width="10" height="3" rx="1.5" fill="#1558a0"/>
+  <!-- Gear overlay -->
+  <circle cx="38" cy="42" r="7" fill="#0f172a"/>
+  <circle cx="38" cy="42" r="4.5" stroke="#1d6bbf" strokeWidth="2" fill="none"/>
+  <path d="M38 35 L38 33 M38 51 L38 49 M31 42 L33 42 M43 42 L45 42 M33.2 37.2 L34.6 38.6 M41.4 45.4 L42.8 46.8 M42.8 37.2 L41.4 38.6 M34.6 45.4 L33.2 46.8" stroke="#1d6bbf" strokeWidth="1.5" strokeLinecap="round"/>
+
+  <!-- Company name -->
+  <text x="58" y="26" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fontWeight="800" fontSize="18" fill="#f1f5f9" letterSpacing="-0.5">MATRIX INN</text>
+  <text x="58" y="46" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fontWeight="500" fontSize="12" fill="#94a3b8" letterSpacing="2">SOLUTIONS</text>
+</svg>
